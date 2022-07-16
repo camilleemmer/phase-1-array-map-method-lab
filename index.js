@@ -12,5 +12,42 @@ const tutorials = [
 ];
 
 const titleCased = () => {
-  return tutorials
+  return tutorials.map((line) => {
+    const words = line.split(' ')
+    const capital = words.map(
+      (word) => word.charAt(0).toUpperCase() + word.slice(1) 
+    )
+    const response = capital.join(' ')
+    return response;
+  })
 }
+
+
+// var sentence = 'the quick brown fox jumped over the lazy dog';
+
+// var capitalizeString = (str) => str[0].toUpperCase() + 
+// str.slice(1).toLowerCase();
+
+// var capitalizeWords = (str) => str.split(' ') .map
+// (capitalizeString).join(' ');
+
+// console.log(capitalizeWords(sentence));
+
+
+// const mySentence = "freeCodeCamp is an awesome resource";
+// const words = mySentence.split(" ");
+
+// for (let i = 0; i < words.length; i++) {
+//     words[i] = words[i][0].toUpperCase() + words[i].substr(1);
+// }
+// words.join(" ");
+
+// function convertFirstLetterToUpperCase(str) {
+//    return str
+//     .toLowerCase()
+//     .split(' ')
+//     .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+//     .join(' ');
+// }
+// console.log(convertFirstLetterToUpperCase("that's how we make it uppercase"))
+
